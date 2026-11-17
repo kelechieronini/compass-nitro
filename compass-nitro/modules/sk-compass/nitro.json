@@ -1,19 +1,24 @@
 {
   "$schema": "https://nitro.margelo.com/nitro.schema.json",
-  "cxxNamespace": [
-    "skcompass"
-  ],
+  "cxxNamespace": ["skcompass"],
   "ios": {
     "iosModuleName": "NitroSkCompass"
   },
   "android": {
-    "androidNamespace": [
-      "skcompass"
-    ],
+    "androidNamespace": ["skcompass"],
     "androidCxxLibName": "NitroSkCompass"
   },
-  "autolinking": {},
-  "ignorePaths": [
-    "**/node_modules"
-  ]
+  "autolinking": {
+    "Compass": {
+      "ios": {
+        "language": "swift",
+        "implementationClassName": "HybridSkMath"
+      },
+      "android": {
+        "language": "kotlin",
+        "implementationClassName": "HybridSkMath"
+      }
+    }
+  },
+  "ignorePaths": ["**/node_modules"]
 }
